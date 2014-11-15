@@ -16,10 +16,39 @@
   <script src="bower_components/platform/platform.js"></script>
   <!-- build:vulcanized elements/elements.vulcanized.html -->
   <link rel="import" href="elements/elements.html">
-  <!-- endbuild-->
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <!-- endbuild--> 
+  <style type="text/css">
+  body {
+    font-family: sans-serif;
+    margin: 0 auto;
+  }
+  core-header-panel {
+    background: white;
+    /* height: 100% fails here on some browsers */
+    height: 100vh;
+    width: 100vw;
+  }
+  core-toolbar {
+    background-color: #00bfff;
+    color: #fff;
+    fill: #fff;
+  }
+  p {
+    margin: 10px;
+    padding: 10px 10px;
+  }
+  </style>
 </head>
 
 <body unresolved>
+    <core-toolbar>
+      <paper-tabs class="fit">
+        <paper-tab>ONE</paper-tab>
+        <paper-tab>TWO</paper-tab>
+      </paper-tabs>
+    </core-toolbar>
 
   <div class="hero-unit">
     <yo-greeting></yo-greeting>
